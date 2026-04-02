@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorizar Alumnos - Mi Universidad</title> 
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <div class="right-group">
+                    <h1 class="top-title">Autorización de Inscripciones</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <div class="user-avatar-circle" id="profile-initial">D</div> 
+                    <h1 class="user-id-text">Docente: <span id="profile-name">Cargando...</span></h1>
+                </div>
+                <div class="right-group">
+                    <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="form-container" style="max-width: 800px;">
+            <div class="form-header">
+                <img src="../Imagenes/MIUniversidadLogo.png" alt="Logo" class="form-logo">
+                <h2>Solicitudes Pendientes</h2>
+                <p class="form-subtitle">Gestiona el acceso de los alumnos a tus materias.</p>
+            </div>
+
+            <div id="contenedorSolicitudes" class="dashboard-content">
+                <div class="table-responsive">
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                        <thead>
+                            <tr style="background-color: #365652; color: white;">
+                                <th style="padding: 10px; text-align: left;">Alumno</th>
+                                <th style="padding: 10px; text-align: left;">Materia</th>
+                                <th style="padding: 10px; text-align: center;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaSolicitudes">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr class="separator">
+
+            <div class="quick-actions">
+                <button onclick="location.href='HomeBDDocen.html'" class="btn-submit" style="background-color: #365652;">Volver al Panel</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/autorizarAlumnos.js"></script>
+</body>
+</html>

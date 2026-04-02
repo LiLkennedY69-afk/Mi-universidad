@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios y Roles - Mi Universidad</title> 
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <div class="right-group">
+                    <h1 class="top-title">Gestión de Usuarios</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <div class="user-avatar-circle" id="profile-initial">A</div> 
+                    <h1 class="user-id-text">Administrador: <span id="profile-name">Cargando...</span></h1>
+                </div>
+                <div class="right-group">
+                    <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="Cursos-container">
+            <div class="form-header">
+                <img src="../Imagenes/MIUniversidadLogo.png" alt="Logo" class="form-logo">
+                <h2>Control de Roles</h2>
+                <p class="form-subtitle">Visualiza y gestiona el acceso de usuarios al sistema.</p>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="Cursos-carrusel" id="contenedorUsuarios">
+                    <p style="text-align: center; width: 100%;">Cargando usuarios...</p>
+                </div> 
+            </div>
+            
+            <hr class="separator" style="margin: 20px 0;">
+
+            <div class="quick-actions" style="display: flex; justify-content: center;">
+                <button onclick="window.location.href='HomeAdmin.html'" class="btn-submit" style="background-color: #4a4a4a; width: 200px;">Volver al Inicio</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/gestionUsuarios.js"></script>
+</body>
+</html>

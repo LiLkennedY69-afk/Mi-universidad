@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido del Curso - Mi Universidad</title> 
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <h1 class="top-title" id="nombreCursoCabecera">Contenido del Curso</h1>
+            </div>
+        </div>
+
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <button onclick="window.history.back()" class="btn-logout" style="background-color: #4a6d68; cursor: pointer;">Volver</button>
+                </div>
+                </div>
+        </div>
+    </header>
+
+    <main style="display: flex; justify-content: center; width: 100%; padding: 20px 0;">
+        <section class="Cursos-container" style="max-width: 1100px; margin: 0;">
+            <div class="form-header">
+                <h2 id="tituloCurso">Nombre de la Materia</h2>
+                <p id="claveCurso" class="form-subtitle" style="display: none;"></p>
+            </div>
+
+            <div class="estudiante-grid-container">
+                <div class="card-estudiante">
+                    <h3 class="card-estudiante-titulo">
+                        Materiales de Estudio
+                    </h3>
+                    <div id="listaMateriales">
+                        </div>
+                </div>
+
+                <div class="card-estudiante">
+                    <h3 class="card-estudiante-titulo">
+                        Tareas y Actividades
+                    </h3>
+                    <div id="listaTareas">
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/contenidoCurso.js"></script>
+</body>
+</html>
