@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro del Curso - Mi Universidad</title> 
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <h1 class="top-title">Foro de Discusión</h1>
+            </div>
+        </div>
+
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <button onclick="window.history.back()" class="btn-logout" style="background-color: #4a6d68; cursor: pointer;">Volver al Curso</button>
+                </div>
+                <div class="right-group">
+                    <span id="nombreMateriaForo" style="color: white; font-weight: bold;">Cargando materia...</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="display: flex; justify-content: center; width: 100%; padding: 20px 0;">
+        <section class="Cursos-container" style="max-width: 900px; width: 95%;">
+            <div class="form-header">
+                <h2>Espacio de Consultas</h2>
+                <p class="form-subtitle">Participa y resuelve tus dudas con compañeros y docentes.</p>
+            </div>
+
+           <div id="contenedorMensajes" 
+     style="height: 500px; width: 80%; overflow-y: auto; background: #cccccce1; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px; box-sizing: border-box;">
+     </div>
+
+            <div class="dashboard-content" style="background: white; padding: 15px; border-radius: 8px; display: flex; gap: 10px; align-items: center;">
+                <textarea id="nuevoMensaje" placeholder="Escribe tu mensaje aquí..." style="flex: 1; border: 1px solid #ccc; border-radius: 5px; padding: 10px; resize: none; font-family: inherit;"></textarea>
+                <button id="btnEnviar" class="btn-submit" style="width: 120px; margin: 0;">Enviar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/foro.js"></script>
+</body>
+</html>
