@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Listas Blancas - Mi Universidad</title> 
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <div class="right-group">
+                    <h1 class="top-title">Panel de Control de Autorizaciones</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <div class="user-avatar-circle" id="profile-initial">A</div> 
+                    <h1 class="user-id-text">Admin: <span id="profile-name">Cargando...</span></h1>
+                </div>
+                <div class="right-group">
+                    <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="Cursos-container" style="max-width: 1000px; margin: 20px auto;">
+            <div class="form-header">
+                <img src="../Imagenes/MIUniversidadLogo.png" alt="Logo" class="form-logo">
+                <h2 id="tituloSeccion"> Usuarios Autorizados</h2>
+                <p class="form-subtitle">Administra los registros autorizados</p>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                <button onclick="cambiarSeccion('profesores_autorizados')" id="btnTabProf" class="btn-submit" style="width: auto; background-color: #365652;">Docentes</button>
+                <button onclick="cambiarSeccion('estudiantes_autorizados')" id="btnTabEst" class="btn-submit" style="width: auto; background-color: #4a4a4a;">Estudiantes</button>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; padding: 0 20px; margin-bottom: 10px;">
+                <button id="btnAbrirModal" class="btn-submit" style="width: auto; padding: 10px 25px;">+ Autorizar Nuevo</button>
+            </div>
+
+            <div class="dashboard-content">
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <thead>
+                            <tr style="background-color: #365652; color: white;">
+                                <th style="padding: 15px; text-align: left;">Nombre Completo</th>
+                                <th style="padding: 15px; text-align: left;">Email / Matrícula</th>
+                                <th style="padding: 15px; text-align: center;">Estatus</th>
+                                <th style="padding: 15px; text-align: center;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contenedorLista">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="quick-actions" style="display: flex; justify-content: center; margin-top: 30px;">
+                <button onclick="window.history.back();" class="btn-submit" style="background-color: #4a4a4a; width: 220px;">
+                    Volver al Panel
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/AutorizarUsuarios.js"></script>
+</body>
+</html>

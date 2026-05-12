@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Curso - Mi Universidad</title>
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png">
+    <style>
+        /* Estilos para las listas dinámicas */
+        .item-dinamico {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            border-left: 4px solid #365652;
+        }
+        .btn-delete-small {
+            background: none;
+            border: none;
+            color: #cc3333;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .gestion-box {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <div class="right-group">
+                    <h1 class="top-title">Editor de Materias</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="form-container" style="max-width: 850px; margin: 30px auto;">
+            <div class="form-header">
+                <h2>Panel de Edición de Curso</h2>
+                <p class="form-subtitle">Gestiona la información, alumnos y materiales del curso.</p>
+            </div>
+
+            <form id="editForm">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; margin-bottom: 20px;">
+                    <div>
+                        <label>Nombre de la Materia:</label>
+                        <input type="text" id="editNombre" class="swal2-input" style="width: 100%; margin: 0;" required>
+                    </div>
+                    <div>
+                        <label>Clave:</label>
+                        <input type="text" id="editClave" class="swal2-input" style="width: 100%; margin: 0;" required>
+                    </div>
+                </div>
+
+                <hr style="margin: 25px 0; border: 0.5px solid #eee;">
+
+                <div class="gestion-box">
+                    <label>Alumnos Inscritos:</label>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <input type="text" id="nuevoAlumno" class="swal2-input" style="margin:0; flex-grow:1;" placeholder="Nombre completo del alumno">
+                        <button type="button" onclick="agregarAlumno()" class="btn-submit" style="width: auto; background:#365652; padding: 0 20px;">Añadir</button>
+                    </div>
+                    <div id="listaAlumnos">
+                        </div>
+                </div>
+
+                <div class="gestion-box">
+                    <label>Materiales de Estudio:</label>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <input type="text" id="nuevoMaterial" class="swal2-input" style="margin:0; flex-grow:1;" placeholder="Título del archivo o link">
+                        <button type="button" onclick="agregarMaterial()" class="btn-submit" style="width: auto; background:#365652; padding: 0 20px;">Subir</button>
+                    </div>
+                    <div id="listaMateriales" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        </div>
+                </div>
+
+                <div class="gestion-box">
+                    <label>Tareas y Actividades:</label>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <input type="text" id="nuevoTituloTarea" class="swal2-input" style="margin:0; flex-grow:1;" placeholder="Título de la tarea">
+                        <input type="number" id="puntosTarea" class="swal2-input" style="margin:0; width: 100px;" placeholder="Pts" value="100">
+                        <button type="button" onclick="agregarTarea()" class="btn-submit" style="width: auto; background:#365652; padding: 0 20px;">Asignar</button>
+                    </div>
+                    <div id="listaTareas">
+                        </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-top: 30px;">
+                    <button type="submit" class="btn-submit" style="background-color: #365652; flex: 2;">ACTUALIZAR CURSO COMPLETO</button>
+                    <button type="button" onclick="window.location.href='VerCursosDocente.html'" class="btn-submit" style="background-color: #666; flex: 1;">CANCELAR</button>
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 30px;">
+                    <button type="button" onclick="window.location.href='Foro.html'" class="btn-submit" style="background-color: #666; flex: 1;">VER FORO</button>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/editCursoDocente.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - MI Universidad</title>
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="stylesheet" href="../css/adminStyles.css">
+     <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo" class="university-logo">
+                </div>
+                <div class="right-group">
+                    <h1 class="top-title">Gestión de Control Escolar</h1>
+                </div>
+            </div>
+        </div>
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <div class="user-avatar-circle">S</div>
+                    <h1 class="user-id-text">Bienvenida, <span>Secretaria 1</span></h1>
+                </div>
+                <div class="right-group">
+                    <button class="btn-logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="Cursos-container-padre">
+        <div class="contenedor-admin-main">
+            
+            <aside class="sidebar-admin-servicios">
+                <div class="sidebar-header-institucional">
+                    <h3>MENÚ DE GESTIÓN</h3>
+                </div>
+               <nav class="nav-links-admin">
+    <button class="btn-admin-nav active" data-seccion="promedio">Ver promedio de un curso</button>
+    <button class="btn-admin-nav" data-seccion="historial">Historial del estudiante</button>
+    <button class="btn-admin-nav" data-seccion="constancia">Generar constancia de estudios</button>
+    <button class="btn-admin-nav" data-seccion="editar">Editar calificación</button>
+    <button class="btn-admin-nav" data-seccion="baja">Dar de baja una materia</button>
+    <button class="btn-admin-nav" data-seccion="certificado">Generar certificado de estudios</button>
+</nav>
+            </aside>
+
+            <section class="workspace-admin">
+                <div class="workspace-header-dark">
+                    <h2 id="dinamic-title">Ver promedio de un curso</h2>
+                </div>
+
+                <div class="workspace-body-dark">
+                    <div class="form-card-admin">
+                        <label class="label-admin">Seleccione el curso académico:</label>
+                        <select class="select-admin-custom">
+                            <option>Cálculo diferencial</option>
+                            <option>Bases de Datos</option>
+                        </select>
+                        <button class="btn-accion-admin-dark">CALCULAR RESULTADOS</button>
+                    </div>
+
+                    <div class="resultados-container-dark">
+                        <p>Los datos solicitados se desplegarán en este apartado tras la consulta.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/HomeAdministrativos.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Curso</title>
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo" class="university-logo">
+                </div>
+                <div class="right-group">
+                    <h1 class="top-title">Panel de Control Docente</h1>
+                </div>
+            </div>
+        </div>
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <div class="user-avatar-circle">M</div> 
+                    <h1 class="user-id-text">Bienvenido, Maestro: <span id="teacher-name">Cargando...</span></h1>
+                </div>
+                <div class="right-group">
+                    <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="Cursos-container-padre">
+        <div class="contenedor-principal-Inspeccionarcurso">
+            
+            <button onclick="window.history.back()" class="btn-regresar-Inspeccionarcurso">
+                « Regresar
+            </button>
+
+            <div class="header-detalle-Inspeccionarcurso">
+                <h2 id="tituloCurso">Cargando...</h2>
+                <p id="infoCurso" style="color: #666;"></p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Tareas de este Curso</h3>
+                <button class="btn-accion-Inspeccionarcurso">+ Nueva Tarea</button>
+            </div>
+            <table class="tabla-datos-Inspeccionarcurso">
+                <thead>
+                    <tr><th>Tarea</th><th>Vencimiento</th><th>Ver Entregas</th><th>Estado</th></tr>
+                </thead>
+                <tbody id="tablaTareas"></tbody>
+            </table>
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Materiales de este Curso</h3>
+                <button class="btn-accion-Inspeccionarcurso">+ Añadir Material</button>
+            </div>
+            <table class="tabla-datos-Inspeccionarcurso">
+                <thead>
+                    <tr><th>Material</th><th>Tipo</th><th>Ver/Descargar</th><th>Estado</th></tr>
+                </thead>
+                <tbody id="tablaMateriales"></tbody>
+            </table>
+
+            <div class="contenedor-foros-Inspeccionarcurso">
+                <h3>Panel de Foros Recientes</h3>
+                <div id="listaForos"></div>
+                <button class="btn-accion-Inspeccionarcurso" style="background-color: #2a73a3; margin-top: 15px;" onclick="irAlForo()">
+                    Ir al Chat del Curso
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/InspeccionarCurso.js"></script>
+</body>
+</html>

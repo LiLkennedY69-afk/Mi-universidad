@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Administrador - Mi Universidad</title> 
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <div class="right-group">
+                    <h1 class="top-title">Perfil de Usuario</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <div class="user-avatar-circle" id="profile-initial-nav">A</div> 
+                    <h1 class="user-id-text">Sesión: <span class="student-name" id="nav-name">Cargando...</span></h1>
+                </div>
+                <div class="right-group">
+                    <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="form-container" style="max-width: 500px; margin-top: 50px;">
+            <div class="form-header">
+                <div class="user-avatar-circle" style="width: 80px; height: 80px; font-size: 2em; margin: 0 auto 15px;" id="main-avatar">A</div>
+                <h2 id="display-username">Nombre de Administrador</h2>
+                <p class="form-subtitle" id="display-role">Administrador de Sistema</p>
+            </div>
+
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 10px; border: 1px solid #ddd; margin-bottom: 20px;">
+                <div style="margin-bottom: 15px;">
+                    <label style="font-weight: bold; color: #365652; display: block; margin-bottom: 5px;">Correo Institucional:</label>
+                    <p id="display-email" style="color: #666; margin: 0;">ejemplo@uagro.mx</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="font-weight: bold; color: #365652; display: block; margin-bottom: 5px;">Contraseña de Acceso:</label>
+                    <p id="display-password" style="color: #a4363e; font-weight: bold; margin: 0;">••••••••</p>
+                </div>
+                <div>
+                    <label style="font-weight: bold; color: #365652; display: block; margin-bottom: 5px;">Estatus de Cuenta:</label>
+                    <p style="color: #28a745; font-weight: bold; margin: 0;">Activa - Permisos Totales</p>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <button onclick="window.location.href='HomeAdmin.html'" class="btn-submit" style="background-color: #4a4a4a; width: 100%; margin-top: 15px; cursor: pointer;">
+    Volver al Panel Principal
+</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/perfilAdmin.js"></script>
+</body>
+</html>

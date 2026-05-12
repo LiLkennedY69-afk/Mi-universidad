@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Mi Universidad</title>
+    <link rel="stylesheet" href="../css/styleForBD.css">
+    <link rel="icon" href="../Imagenes/MIUniversidadLogo.png" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="left-group">
+                    <img src="../Imagenes/Gemini_Generated_Image_6zhd806zhd806zhd-removebg-preview.png" alt="Logo UAGRO" class="university-logo">
+                </div>
+                <h1 class="top-title">Panel de Control Maestro</h1>
+            </div>
+        </div>
+        <div class="id-bar">
+            <div class="header-container">
+                <div class="left-group id-content">
+                    <div class="user-avatar-circle" id="profile-initial">A</div>
+                    <h1 class="user-id-text">Admin: <span id="profile-name">Cargando...</span></h1>
+                </div>
+                <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="home-card">
+            <img src="../Imagenes/MIUniversidadLogo.png" alt="Logo" class="home-logo">
+            <h2 class="welcome-title">Control Maestro</h2>
+            <p class="form-subtitle">Gestión global del sistema universitario.</p>
+            
+            <div class="admin-actions-list">
+                <button id="BtnGestionAutorizados" class="btn-home btn-primary">Autorizar Alumnos/Docentes</button>
+                <button id="BtnGestionUsuarios" class="btn-home btn-neutral">Gestionar Usuarios y Roles</button>
+                <button id="BtnGestionCursos" class="btn-home btn-dark">Administrar Cursos Globales</button>
+                
+                <hr class="separator" style="margin: 10px 0;">
+                
+                <button id="BtnPerfilAdmin" class="btn-home btn-secondary">Mi Perfil Admin</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/HomeAdminBD.js"></script>
+</body>
+</html>
